@@ -8,23 +8,11 @@
 
 ## Resumo
 
-Site pessoal que apresenta minha trajetória, projetos e formas de contato, no domínio [murilocardoso.dev](https://murilocardoso.dev).
-
-## Problema
-
-Ter um canal profissional próprio, independente de redes sociais, para apresentar meu trabalho como Full-Stack AI Engineer.
-
-## Solução
-
-Um portfólio web com foco em apresentação visual e animações. [REVISAR: listar as seções previstas do site]
+Meu portfólio profissional, no domínio [murilocardoso.dev](https://murilocardoso.dev).
 
 ## Tecnologias
 
 Next.js, TypeScript, Tailwind CSS v4 e Framer Motion.
-
-## Meu papel
-
-Projeto pessoal. [REVISAR: confirmar se o design também é seu]
 
 ## Como acessar
 
