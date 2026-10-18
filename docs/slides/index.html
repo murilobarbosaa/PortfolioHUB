@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Slides PortfolioHUB | Murilo Cardoso</title>
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <style>
+    :root {
+      --bg: #0f1115; --surface: #171a21; --text: #e9eaee; --muted: #a0a5b1;
+      --border: #2a2e38; --accent: #7d9bff; --alt: #7fd8b0;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; height: 100%; background: var(--bg); color: var(--text); font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; overflow: hidden; }
+    .deck { position: relative; height: 100%; }
+    .slide {
+      position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center;
+      padding: 6vh 8vw; opacity: 0; visibility: hidden; transition: opacity .3s ease;
+    }
+    .slide.is-active { opacity: 1; visibility: visible; }
+    @media (prefers-reduced-motion: reduce) { .slide { transition: none; } }
+    .kicker { color: var(--accent); text-transform: uppercase; letter-spacing: .08em; font-weight: 600; font-size: clamp(.8rem, 1.4vw, 1rem); margin: 0 0 1.2vh; }
+    h1 { font-size: clamp(2rem, 6vw, 4.6rem); line-height: 1.05; margin: 0 0 2vh; letter-spacing: -.02em; }
+    h2 { font-size: clamp(1.6rem, 4.2vw, 3.2rem); line-height: 1.1; margin: 0 0 4vh; letter-spacing: -.01em; }
+    p, li { font-size: clamp(1rem, 2vw, 1.5rem); line-height: 1.5; }
+    .muted { color: var(--muted); }
+    ul { margin: 0; padding-left: 1.2em; }
+    li { margin-bottom: 1.2vh; }
+    li::marker { color: var(--accent); }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2vw; }
+    .box { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 2.4vh 1.6vw; }
+    .box h3 { margin: 0 0 1vh; font-size: clamp(1.05rem, 2vw, 1.5rem); color: var(--accent); }
+    .box p { margin: 0; font-size: clamp(.9rem, 1.6vw, 1.15rem); color: var(--muted); }
+    .box.alt h3 { color: var(--alt); }
+    pre {
+      margin: 0; background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
+      padding: 2.4vh 2vw; font-size: clamp(.8rem, 1.5vw, 1.15rem); line-height: 1.5; overflow: auto;
+    }
+    code { font-family: ui-monospace, "Cascadia Code", Consolas, monospace; }
+    a { color: var(--accent); }
+    .flow { display: flex; flex-wrap: wrap; align-items: center; gap: 1vw; margin-bottom: 4vh; }
+    .flow span { background: var(--surface); border: 1px solid var(--border); border-radius: 999px; padding: .5em 1em; font-size: clamp(.85rem, 1.6vw, 1.2rem); }
+    .flow b { color: var(--accent); }
+    .controls {
+      position: fixed; right: 2vw; bottom: 2vh; display: flex; align-items: center; gap: 10px; z-index: 2;
+      color: var(--muted); font-size: .9rem;
+    }
+    .controls button {
+      width: 40px; height: 40px; border-radius: 10px; border: 1px solid var(--border);
+      background: var(--surface); color: var(--text); font-size: 1.1rem; cursor: pointer;
+    }
+    .controls button:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+    .progress { position: fixed; left: 0; top: 0; height: 4px; background: var(--accent); transition: width .3s ease; }
+    .home { position: fixed; left: 2vw; bottom: 2vh; color: var(--muted); font-size: .9rem; }
+  </style>
+</head>
+<body>
+  <div class="progress" aria-hidden="true"></div>
+  <main class="deck" aria-roledescription="apresentação" aria-label="Slides do PortfolioHUB">
+
+    <section class="slide" aria-label="Slide 1 de 8">
+      <p class="kicker">Entrega intermediária · UniCEUB</p>
+      <h1>PortfolioHUB</h1>
+      <p>Criação de repositório com versionamento</p>
+      <p class="muted">Murilo Barbosa Cardoso · Ciência da Computação · Full-Stack AI Engineer</p>
+    </section>
+
+    <section class="slide" aria-label="Slide 2 de 8">
+      <p class="kicker">01 · Objetivo</p>
+      <h2>Um único lugar para mostrar meus projetos</h2>
+      <ul>
+        <li>Organizar projetos acadêmicos e profissionais em um repositório público</li>
+        <li>Documentar cada projeto com um README padronizado</li>
+        <li>Versionar com Git: tags, releases, branches e pull requests</li>
+        <li>Publicar um site no GitHub Pages e integrar com o LinkedIn</li>
+      </ul>
+    </section>
+
+    <section class="slide" aria-label="Slide 3 de 8">
+      <p class="kicker">02 · Estrutura do repositório</p>
+      <h2>Três seções, uma pasta por projeto</h2>
+      <pre><code>PortfolioHUB/
+├── index.html · assets/      página do GitHub Pages
+├── academicos/
+│   ├── sistema-veterinario/  README + docs/
+│   ├── sistemas-embarcados/  README + docs/
+│   └── portfoliohub/
+├── pessoais/
+│   ├── bora-na-tech/         estudos de caso
+│   ├── connecta-plus/
+│   └── murilocardoso-dev/
+├── docs/slides/              esta apresentação
+└── README.md · LICENSE (MIT)</code></pre>
+    </section>
+
+    <section class="slide" aria-label="Slide 4 de 8">
+      <p class="kicker">03 · Versionamento</p>
+      <h2>Tags, branches e pull requests</h2>
+      <div class="flow">
+        <span><b>v1.0</b> página inicial</span>
+        <span>→</span>
+        <span><b>feat/projects-docs</b> PR #1</span>
+        <span>→</span>
+        <span><b>feat/pages-portfolio</b> PR #2</span>
+        <span>→</span>
+        <span><b>v1.1</b> release</span>
+      </div>
+      <ul>
+        <li>Tags anotadas e releases no GitHub com notas de mudança</li>
+        <li>Uma branch por funcionalidade, mesclada por pull request</li>
+        <li>Commits em inglês no padrão Conventional Commits</li>
+      </ul>
+    </section>
+
+    <section class="slide" aria-label="Slide 5 de 8">
+      <p class="kicker">04 · Projetos em destaque</p>
+      <h2>Acadêmicos e profissionais</h2>
+      <div class="grid">
+        <div class="box"><h3>Sistema Veterinário</h3><p>Documento de Software e Documento de Requisitos para uma aplicação web de clínicas veterinárias.</p></div>
+        <div class="box"><h3>Sistemas Embarcados</h3><p>Relatórios com portas lógicas e um sistema de contagem com Arduino.</p></div>
+        <div class="box alt"><h3>Bora na Tech</h3><p>Plataforma de carreira em tech. Sou CTO e cofundador.</p></div>
+        <div class="box alt"><h3>Connecta+</h3><p>Toda a engenharia feita por mim, em Next.js e TypeScript. Design de terceiros.</p></div>
+      </div>
+    </section>
+
+    <section class="slide" aria-label="Slide 6 de 8">
+      <p class="kicker">05 · GitHub Pages</p>
+      <h2>Site publicado direto da branch main</h2>
+      <ul>
+        <li>HTML, CSS e JavaScript puros, sem framework e sem build</li>
+        <li>Responsivo, com modo escuro e foco em acessibilidade</li>
+        <li>Cards que levam aos READMEs e aos sites ao vivo</li>
+        <li><a href="https://murilobarbosaa.github.io/PortfolioHUB/">murilobarbosaa.github.io/PortfolioHUB</a></li>
+      </ul>
+    </section>
+
+    <section class="slide" aria-label="Slide 7 de 8">
+      <p class="kicker">06 · Integração com o LinkedIn</p>
+      <h2>O hub na seção Projetos do perfil</h2>
+      <ul>
+        <li>Projeto PortfolioHUB adicionado na seção Projetos</li>
+        <li>Link para o repositório e para a GitHub Page</li>
+        <li>Competências: Git, GitHub, GitHub Pages, HTML, CSS e JavaScript</li>
+        <li><a href="https://www.linkedin.com/in/murilocardoso-dev">linkedin.com/in/murilocardoso-dev</a></li>
+      </ul>
+    </section>
+
+    <section class="slide" aria-label="Slide 8 de 8">
+      <p class="kicker">Obrigado</p>
+      <h1>github.com/murilobarbosaa/PortfolioHUB</h1>
+      <p class="muted">murilobarbosa2811@gmail.com · linkedin.com/in/murilocardoso-dev</p>
+    </section>
+
+  </main>
+
+  <a class="home" href="../../">Voltar ao site</a>
+  <nav class="controls" aria-label="Navegação dos slides">
+    <button type="button" data-dir="-1" aria-label="Slide anterior">←</button>
+    <span class="counter" aria-live="polite">1 / 8</span>
+    <button type="button" data-dir="1" aria-label="Próximo slide">→</button>
+  </nav>
+
+  <script>
+    (function () {
+      var slides = document.querySelectorAll('.slide');
+      var counter = document.querySelector('.counter');
+      var bar = document.querySelector('.progress');
+      var current = 0;
+
+      function show(i) {
+        current = Math.max(0, Math.min(slides.length - 1, i));
+        slides.forEach(function (s, n) {
+          s.classList.toggle('is-active', n === current);
+          s.setAttribute('aria-hidden', String(n !== current));
+        });
+        counter.textContent = (current + 1) + ' / ' + slides.length;
+        bar.style.width = ((current + 1) / slides.length * 100) + '%';
+        history.replaceState(null, '', '#' + (current + 1));
+      }
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') { e.preventDefault(); show(current + 1); }
+        if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); show(current - 1); }
+        if (e.key === 'Home') show(0);
+        if (e.key === 'End') show(slides.length - 1);
+      });
+      document.querySelectorAll('.controls button').forEach(function (b) {
+        b.addEventListener('click', function () { show(current + Number(b.dataset.dir)); });
+      });
+
+      var start = parseInt(location.hash.slice(1), 10);
+      show(isNaN(start) ? 0 : start - 1);
+    })();
+  </script>
+</body>
+</html>

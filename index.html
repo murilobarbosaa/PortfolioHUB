@@ -4,21 +4,181 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>PortfolioHUB | Murilo Cardoso</title>
-  <style>
-    body { font-family: system-ui, sans-serif; max-width: 720px; margin: 3rem auto; padding: 0 1rem; line-height: 1.6; color: #1a1a1a; }
-    a { color: #2457d6; }
-  </style>
+  <meta name="description" content="Hub de projetos acadêmicos e pessoais de Murilo Barbosa Cardoso, estudante de Ciência da Computação no UniCEUB e Full-Stack AI Engineer.">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    try { var t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
 </head>
 <body>
-  <h1>PortfolioHUB</h1>
-  <p>Hub de projetos acadêmicos e pessoais de Murilo Barbosa Cardoso, estudante de Ciência da Computação no UniCEUB e Full-Stack AI Engineer.</p>
-  <h2>Seções</h2>
-  <ul>
-    <li>Projetos acadêmicos</li>
-    <li>Projetos pessoais e profissionais</li>
-    <li>Documentação e slides</li>
-  </ul>
-  <p>Página em construção. Versão 1.0.</p>
-  <p><a href="https://github.com/murilobarbosaa/PortfolioHUB">Repositório no GitHub</a></p>
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="topbar">
+    <nav class="wrap nav" aria-label="Principal">
+      <a class="brand" href="#inicio">PortfolioHUB</a>
+      <ul class="nav-links">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#documentos">Documentos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+      <button class="theme-toggle" type="button" aria-label="Alternar modo escuro" aria-pressed="false">
+        <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.39 5.39 0 0 1-4.4 2.26 5.4 5.4 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg>
+      </button>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <section id="inicio" class="hero wrap">
+      <p class="eyebrow">Ciência da Computação · UniCEUB</p>
+      <h1>Murilo Barbosa Cardoso</h1>
+      <p class="role">Full-Stack AI Engineer</p>
+      <p class="lead">CTO e cofundador do Bora na Tech e Engenheiro de IA na SinergyRH. Este hub reúne meus projetos acadêmicos e profissionais, com documentação e versionamento.</p>
+      <div class="actions">
+        <a class="btn primary" href="#projetos">Ver projetos</a>
+        <a class="btn" href="https://github.com/murilobarbosaa/PortfolioHUB">Repositório no GitHub</a>
+      </div>
+    </section>
+
+    <section id="sobre" class="wrap section" aria-labelledby="sobre-titulo">
+      <h2 id="sobre-titulo">Sobre</h2>
+      <div class="about">
+        <div>
+          <p>Sou estudante de Ciência da Computação no UniCEUB, com conclusão prevista para dezembro de 2026. Trabalho com engenharia full-stack e inteligência artificial, do banco de dados ao deploy.</p>
+          <ul class="facts">
+            <li><strong>CTO e cofundador</strong> do Bora na Tech</li>
+            <li><strong>Engenheiro de IA</strong> na SinergyRH</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Stack</h3>
+          <ul class="tags" aria-label="Tecnologias">
+            <li>TypeScript</li><li>JavaScript</li><li>Python</li><li>PHP</li>
+            <li>React</li><li>Next.js</li><li>Express</li><li>PostgreSQL</li>
+            <li>Supabase</li><li>Redis</li><li>Docker</li><li>Linux</li>
+            <li>Vercel</li><li>Railway</li><li>n8n</li><li>Qdrant</li>
+            <li>Embeddings vetoriais</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="projetos" class="wrap section" aria-labelledby="projetos-titulo">
+      <h2 id="projetos-titulo">Projetos</h2>
+      <div class="filters" role="group" aria-label="Filtrar projetos">
+        <button type="button" class="chip is-active" data-filter="todos" aria-pressed="true">Todos</button>
+        <button type="button" class="chip" data-filter="academico" aria-pressed="false">Acadêmicos</button>
+        <button type="button" class="chip" data-filter="pessoal" aria-pressed="false">Pessoais e profissionais</button>
+      </div>
+
+      <ul class="cards">
+        <li class="card" data-cat="academico">
+          <span class="badge">Acadêmico</span>
+          <h3>Sistema Veterinário</h3>
+          <p>Proposta de aplicação web para clínicas e médicos-veterinários, com Documento de Software e Documento de Requisitos.</p>
+          <p class="stack">Documentação · Requisitos</p>
+          <div class="links">
+            <a href="https://github.com/murilobarbosaa/PortfolioHUB/tree/main/academicos/sistema-veterinario">README</a>
+          </div>
+        </li>
+        <li class="card" data-cat="academico">
+          <span class="badge">Acadêmico</span>
+          <h3>Sistemas Embarcados</h3>
+          <p>Relatórios semanais de Sistemas em Tempo Real e Embarcados: contexto histórico, portas lógicas e contagem com Arduino.</p>
+          <p class="stack">Arduino Uno · Tinkercad · Falstad</p>
+          <div class="links">
+            <a href="https://github.com/murilobarbosaa/PortfolioHUB/tree/main/academicos/sistemas-embarcados">README</a>
+          </div>
+        </li>
+        <li class="card" data-cat="academico">
+          <span class="badge">Acadêmico</span>
+          <h3>PortfolioHUB</h3>
+          <p>Este hub: repositório versionado com tags, branches e pull requests, publicado no GitHub Pages.</p>
+          <p class="stack">Git · GitHub Pages · HTML · CSS · JS</p>
+          <div class="links">
+            <a href="https://github.com/murilobarbosaa/PortfolioHUB/tree/main/academicos/portfoliohub">README</a>
+            <a href="https://github.com/murilobarbosaa/PortfolioHUB/releases">Releases</a>
+          </div>
+        </li>
+        <li class="card" data-cat="pessoal">
+          <span class="badge alt">Profissional</span>
+          <h3>Bora na Tech</h3>
+          <p>Plataforma brasileira de carreira em tecnologia. Sou CTO, cofundador e responsável pela engenharia.</p>
+          <p class="stack">React 19 · TypeScript · Tailwind v4 · Express · Supabase</p>
+          <div class="links">
+            <a href="https://github.com/murilobarbosaa/PortfolioHUB/tree/main/pessoais/bora-na-tech">README</a>
+            <a href="https://boranatech.com.br">Site ao vivo</a>
+            <a href="https://github.com/murilobarbosaa/BoraNaTech-Showcase">Vitrine</a>
+          </div>
+        </li>
+        <li class="card" data-cat="pessoal">
+          <span class="badge alt">Profissional</span>
+          <h3>Connecta+</h3>
+          <p>Plataforma web em que fiz sozinho toda a engenharia: front, back, banco, deploy e IA. O design não é meu.</p>
+          <p class="stack">Next.js · TypeScript</p>
+          <div class="links">
+            <a href="https://github.com/murilobarbosaa/PortfolioHUB/tree/main/pessoais/connecta-plus">README</a>
+            <a href="https://app.connectaplus.com.br">Site ao vivo</a>
+          </div>
+        </li>
+        <li class="card" data-cat="pessoal">
+          <span class="badge alt">Pessoal</span>
+          <h3>murilocardoso.dev</h3>
+          <p>Meu portfólio profissional, em desenvolvimento.</p>
+          <p class="stack">Next.js · TypeScript · Tailwind v4 · Framer Motion</p>
+          <div class="links">
+            <a href="https://github.com/murilobarbosaa/PortfolioHUB/tree/main/pessoais/murilocardoso-dev">README</a>
+            <a href="https://murilocardoso.dev">Site</a>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section id="documentos" class="wrap section" aria-labelledby="documentos-titulo">
+      <h2 id="documentos-titulo">Documentos e slides</h2>
+      <ul class="docs">
+        <li>
+          <a href="docs/slides/">
+            <strong>Slides da apresentação</strong>
+            <span>Roteiro visual do vídeo: objetivo, estrutura, versionamento, projetos, Pages e LinkedIn. Use as setas do teclado.</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/murilobarbosaa/PortfolioHUB#readme">
+            <strong>Planejamento do repositório</strong>
+            <span>README raiz com seções, árvore de diretórios, índice e boas práticas de versionamento.</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/murilobarbosaa/PortfolioHUB/tree/main/academicos/sistema-veterinario/docs">
+            <strong>Sistema Veterinário: documentos</strong>
+            <span>Documento de Software v1 e Documento de Requisitos.</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/murilobarbosaa/PortfolioHUB/tree/main/academicos/sistemas-embarcados/docs">
+            <strong>Sistemas Embarcados: relatórios</strong>
+            <span>Relatórios semanais da disciplina.</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section id="contato" class="wrap section" aria-labelledby="contato-titulo">
+      <h2 id="contato-titulo">Contato</h2>
+      <ul class="contact">
+        <li><a href="https://github.com/murilobarbosaa">GitHub<span>murilobarbosaa</span></a></li>
+        <li><a href="https://www.linkedin.com/in/murilocardoso-dev">LinkedIn<span>murilocardoso-dev</span></a></li>
+        <li><a href="mailto:murilobarbosa2811@gmail.com">E-mail<span>murilobarbosa2811@gmail.com</span></a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <p>© 2026 Murilo Barbosa Cardoso · <a href="https://github.com/murilobarbosaa/PortfolioHUB/blob/main/LICENSE">Licença MIT</a> · <a href="https://github.com/murilobarbosaa/PortfolioHUB/releases">Versões</a></p>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
