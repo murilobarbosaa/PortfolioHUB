@@ -37,7 +37,6 @@ PortfolioHUB/
 │   ├── js/                    # scripts da página
 │   └── img/                   # imagens
 ├── academicos/
-│   ├── sistema-veterinario/   # README.md + docs/
 │   ├── sistemas-embarcados/   # README.md + docs/
 │   └── portfoliohub/          # README.md
 ├── pessoais/
@@ -56,7 +55,6 @@ PortfolioHUB/
 
 | Projeto | Descrição |
 | --- | --- |
-| [Sistema Veterinário](academicos/sistema-veterinario/README.md) | Proposta de aplicação web para clínicas e médicos-veterinários, com documento de software e documento de requisitos |
 | [Sistemas Embarcados](academicos/sistemas-embarcados/README.md) | Relatórios da disciplina Sistemas em Tempo Real e Embarcados, com portas lógicas e contagem com Arduino |
 | [PortfolioHUB](academicos/portfoliohub/README.md) | Este hub: repositório versionado e página no GitHub Pages |
 
